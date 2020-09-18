@@ -1,0 +1,50 @@
+.chat-environ{
+  height: 400px;
+  width: 300px;
+  background-color: #ffe5e5;
+  border: 4px solid ;
+}
+.inputId{
+  top: 350px;
+  width: 200px;
+  height: 40px;
+  color: white;
+  border: 4px groove #ccccff;
+  border-radius: 10px 50px 50px 10px;
+  background-color: #0000cc;
+}
+.msgBox{
+  height: 300px;
+  width: 100%;
+  color: white;
+  font-size: 1.5em ;
+  font-family: Georgia;
+  border-top: 30px solid #0000cc;
+  background-color: #ccccff;
+  overflow: scroll;
+}
+.btn{
+  background-color: #0000cc;
+  height: 50px;
+  width: 60px;
+  border-radius: 50px 10px 10px 50px;
+  color: white;
+  float: right;
+}
+.text-msg-recieve{
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.text-msg-send{
+  float: left;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+.chat-msg{
+  min-height: 70px;
+}
