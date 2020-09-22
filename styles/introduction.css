@@ -38,3 +38,13 @@
   h1{
       margin-left: 200px;
   }
+  .alarm{
+    font-size: 1.5em;
+    background-color: lawngreen;
+    margin-left: 790px;
+    color: ivory;
+    border: 5px outset yellow;
+}
+.alarm a{git 
+  text-decoration: none;
+}
