@@ -1,6 +1,4 @@
 function CallAlarm(){
-  this.firstDiv = document.createElement("div");
-  this.firstDiv.setAttribute("class", "first-Div");
   this.secondDiv = document.createElement("div");
   this.secondDiv.setAttribute("class", "second-Div");
   this.input1 = document. createElement("input");
@@ -15,8 +13,7 @@ function CallAlarm(){
   this.secondDiv.appendChild(this.input1)
   this.secondDiv.appendChild(this.input2);
   this.secondDiv.appendChild(this.send);
-  this.firstDiv.appendChild(this.secondDiv)
-  document.body.appendChild(this.firstDiv);
+  document.body.appendChild(this.secondDiv)
       
   this.send.onclick= function(e){
     this.alarmHour =  document.querySelector(".inputClass1").value;
@@ -76,24 +73,8 @@ function CallAlarm(){
   }
 }
  
+  var alarm1 = new CallAlarm()
+  var alarm2 = new CallAlarm()
   
-  function Another() {
-    this.createAlarm = document.createElement("button");
-    this.createAlarm.setAttribute("class", "major");
-    this.createAlarm.innerHTML = "Create Alarm";
-    document.body.appendChild(this.createAlarm);
 
-    this.createAlarm.onclick = function(e){
-      this.closeAlarm = document.createElement("button");
-      this.closeAlarm.setAttribute("class", "unclick")
-      this.closeAlarm.innerHTML = "Close";
-      CallAlarm();
-      document.body.appendChild(this.closeAlarm);
-      var free = document.querySelector(".unclick")
-      this.closeAlarm.onclick = function(e){
-        free.setAttribute("class", "click")
-      }
-    }
-  }
- var addAlarm =new Another()
- addAlarm
+ 
