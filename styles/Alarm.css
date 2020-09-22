@@ -1,5 +1,5 @@
 body{
-  background-color: white;
+  background:white;
 }
 
 h1{
@@ -7,7 +7,7 @@ h1{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 50px;
   box-shadow: 6px 8px 4px 2px blue;
-  background-color: coral;
+
 }
 
 .newAlarm{
@@ -16,8 +16,8 @@ h1{
 .inputClass1{
   width: 30px;
   padding: 10px;
-  margin: 5px;
-  background-color: white;
+  margin-right: -40px;
+  background: linear-gradient(to bottom left, #ccffff 14%, #000066 72%);
   box-shadow: -2px 2px black;
   margin-left: 50px;
   color: black;
@@ -25,8 +25,8 @@ h1{
 .inputClass2{
   width: 30px;
   padding: 10px;
-  margin-left: 15px;
-  background-color:white;
+  margin-left: 40px;
+  background: linear-gradient(to bottom left, #ccffff 14%, #000066 72%);
   box-shadow: 2px 3px black;
   color: black;
 }
@@ -35,26 +35,22 @@ h1{
   font-weight: bolder;
 
 }
-.first-Div{
- background-color: darkblue; 
-  display: flex;
-  width: 300px;
-  height: 200px;
-  margin: auto;
-  box-shadow: 12px 4px  6px coral;
-}
 .second-Div{
-  background-color: blue;
-  width: 250px;
+  background: linear-gradient(to bottom left, #ffffff 14%, #660033 72%);
+  width: 270px;
   height:150px ;
-  box-shadow: 4px 5px black;
+  border-radius: 5px;
+  box-shadow: 7px 9px  rgb(19, 0, 0);
   margin: 15px;
 }
 
 .submit{
-  margin-left: 50px;
-  margin-top: 30px;
-  font-size: 30px;
+  margin-left: 70px;
+  margin-top: 60px;
+  font-size: 20px;
+  color: #ccffff;
+  border: 2px black;
+  background: linear-gradient(to top right, #000066 -1%, #000000 63%);
   background-origin: padding-box;
 }
 .click{
