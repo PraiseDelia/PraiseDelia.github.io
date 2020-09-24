@@ -14,36 +14,39 @@ function CallAlarm(){
   this.secondDiv.appendChild(this.input2);
   this.secondDiv.appendChild(this.send);
   document.body.appendChild(this.secondDiv)
-      
+  
+  var ideal = this;
   this.send.onclick= function(e){
-    this.alarmHour =  document.querySelector(".inputClass1").value;
-    this.alarmMin = document.querySelector(".inputClass2").value
-    this.presentTime = new Date()
-    var day = this.presentTime.getDay()
-    var date = this.presentTime.getDate()
-    var month = this.presentTime.getMonth()
-    var year = this.presentTime.getFullYear()
-    this.alarm = new Date(year, month, date, this.alarmHour, this.alarmMin);
+    var idealHour = ideal.input1.value;
+    var idealMin = ideal.input2.value;
+    ideal.alarmHour =  idealHour;
+    ideal.alarmMin = idealMin;
+    ideal.presentTime = new Date()
+    var day = ideal.presentTime.getDay()
+    var date = ideal.presentTime.getDate()
+    var month = ideal.presentTime.getMonth()
+    var year = ideal.presentTime.getFullYear()
+    ideal.alarm = new Date(year, month, date, ideal.alarmHour, ideal.alarmMin);
     //  alert(this.alarm)
     // to convert both times into miliseconds
-    this.convertTime = this.presentTime.getTime()
-    this.convertAlarm = this.alarm.getTime();
+    ideal.convertTime = ideal.presentTime.getTime()
+    ideal.convertAlarm = ideal.alarm.getTime();
     //find how many miliseconds are left from convertTime till convertAlarm
-    this.timeLeft = this.convertAlarm - this.convertTime
+    ideal.timeLeft = ideal.convertAlarm - ideal.convertTime
   
     // Access the number of hours left
-    this.hoursLeft = Math.floor(this.timeLeft/3600000)
+    ideal.hoursLeft = Math.floor(ideal.timeLeft/3600000)
     console.log(this.hoursLeft)
     //Access the number of mins left
-    this.minutesLeft = Math.floor(this.timeLeft / 60000);
-    this.Min = (this.minutesLeft % 60)
-    var minn = this.Min + 1
-    var minny = this.minutesLeft + 1
-    if(this.minutesLeft < 60){
-      alert("Your alarm will go off in "  + this.hoursLeft + "hours " + minny + " minutes")
-    }else if(this.minutesLeft < 1)
+    ideal.minutesLeft = Math.floor(ideal.timeLeft / 60000);
+    ideal.Min = (ideal.minutesLeft % 60)
+    var minn = ideal.Min + 1
+    var minny = ideal.minutesLeft + 1
+    if(ideal.minutesLeft < 60){
+      alert("Your alarm will go off in "  + ideal.hoursLeft + "hours " + minny + " minutes")
+    }else if(ideal.minutesLeft < 1)
     { alert("Your alarm will go off in less than a minute")
-    }else {alert("Your alarm will go off in "  + this.hoursLeft + "hours " + minn + " minutes")
+    }else {alert("Your alarm will go off in "  + ideal.hoursLeft + "hours " + minn + " minutes")
     }
     function timer(){
       alert("Rise and shine ")
@@ -69,12 +72,12 @@ function CallAlarm(){
     }
   }
   // note that everything about snoozing took place inside the timer function. SetOff will now stall the execution of the timer fnctn until the time the user has set for the alarm has reached
-      var setOff = window.setTimeout(timer, this.timeLeft)
+      var setOff = window.setTimeout(timer, ideal.timeLeft)
   }
 }
  
   var alarm1 = new CallAlarm()
   var alarm2 = new CallAlarm()
-  
 
+  
  
