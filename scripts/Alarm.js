@@ -90,6 +90,6 @@ function CallAlarm(){
   }
  var addAlarm =new Another()
 
- var alarm1 = new CallAlarm()
+ 
   
   
