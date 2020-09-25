@@ -76,8 +76,20 @@ function CallAlarm(){
   }
 }
  
-  var alarm1 = new CallAlarm()
-  var alarm2 = new CallAlarm()
 
+  function Another() {
+    this.createAlarm = document.createElement("button");
+    this.createAlarm.setAttribute("class", "major");
+    this.createAlarm.innerHTML = "Create Alarm";
+    document.body.appendChild(this.createAlarm);
+
+    this.createAlarm.onclick =  function(e){
+      var newAlarm = new CallAlarm()
+      
+    }
+  }
+ var addAlarm =new Another()
+
+ var alarm1 = new CallAlarm()
   
- 
+  
