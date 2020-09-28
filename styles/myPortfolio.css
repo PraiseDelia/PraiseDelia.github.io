@@ -11,7 +11,7 @@
     padding: 10px;
 }
 .flex.side{
-    width: 20%;
+    width: 30%;
     display: flex;
     flex-direction: column;
 }
@@ -26,7 +26,7 @@
     text-decoration: none;
 }
 .flex.left{
-    width: 80%;
+    width: 70%;
     position: relative;
 }
 .image{
@@ -67,6 +67,7 @@
     display: flex;
     flex-direction: row;
     background-color:rgb(124, 124, 248);
+    color: white;
 }
 .flip{
     background-color:rgb(42, 42, 112);
@@ -74,7 +75,7 @@
     padding: 10px;
 }
 .flip.one{
-    width: 40%;
+    width: 20%;
     
 }
 .me{
@@ -106,15 +107,19 @@ h3{
 @media screen and (max-width: 800px){
     p{
         font-size: small;
-        font-weight: bold;
     }
     .work{
         font-size: small;
     }
     .second{
         font-size: xx-small;
+        margin: 0;
     }
     h3{
         font-size: small;
+    }
+    .flex.side{
+        margin: 0px;
+        text-overflow: clip;
     }
 }
