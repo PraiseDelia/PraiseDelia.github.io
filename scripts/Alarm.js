@@ -89,3 +89,4 @@ function CallAlarm(){
     }
   }
  var addAlarm =new Another()
+
