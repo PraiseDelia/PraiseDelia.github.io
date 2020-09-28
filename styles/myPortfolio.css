@@ -19,7 +19,9 @@
     background-color: rgb(8, 130, 252);
     margin: 10px;
     padding: 10px;
+    font-size: small;
 }
+
 .first a{
     text-decoration: none;
 }
@@ -84,7 +86,7 @@
     margin: 0;
 }
 .second{
-    margin: 10px;
+    font-size: small;
     
 
 }
@@ -106,5 +108,8 @@ h3{
     p{
         font-size: small;
         font-weight: bold;
+    }
+    .work{
+        font-size: 100%;
     }
 }
