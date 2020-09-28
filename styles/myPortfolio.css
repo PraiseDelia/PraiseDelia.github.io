@@ -66,11 +66,10 @@
 #flex-holder{
     display: flex;
     flex-direction: row;
-    background-color:#ffff99;
-    max-width: 100%;
+    background-color:rgb(124, 124, 248);
 }
 .flip{
-    background-color:#ffff00;
+    background-color:rgb(42, 42, 112);
     margin: 6px;
     padding: 10px;
 }
@@ -94,7 +93,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #ffff00;
+    background-color: rgb(42, 42, 112);
 }
 p{
     font-size: 150%;
@@ -110,6 +109,12 @@ h3{
         font-weight: bold;
     }
     .work{
-        font-size: 100%;
+        font-size: small;
+    }
+    .second{
+        font-size: xx-small;
+    }
+    h3{
+        font-size: small;
     }
 }
