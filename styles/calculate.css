@@ -1,0 +1,38 @@
+.f1{
+    background-color: #0000cc;
+    width: 50%;
+    height: 90px;
+    margin-bottom: 20%;
+}
+
+
+.RRate{
+    width: 10%;
+    margin-top: 5%;
+}
+.CCapital{
+    width: 10%;
+    margin-left: 10%;
+}
+.TTime{
+    width: 10%;
+    
+}
+::placeholder{
+    font-size: 60%;
+    color: black;
+    font-weight: bold;
+}
+.ans-box{
+    height: 100px;
+    width: 40%;
+    color: white;
+    font-size: 1.5em ;
+    font-family: Georgia;
+    border: 10px solid #0000cc;
+    background-color: #ccccff;
+}
+.word{
+    color: red;
+    
+}
