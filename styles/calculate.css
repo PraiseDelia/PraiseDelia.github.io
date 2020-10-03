@@ -1,22 +1,25 @@
 .f1{
     background-color: #0000cc;
-    width: 50%;
+    width: 100%;
     height: 90px;
     margin-bottom: 20%;
 }
 
 
 .RRate{
-    width: 10%;
+    width: 15%;
     margin-top: 5%;
 }
 .CCapital{
-    width: 10%;
+    width: 20%;
     margin-left: 10%;
 }
 .TTime{
     width: 10%;
     
+}
+.NNumber{
+    width: 10%;
 }
 ::placeholder{
     font-size: 60%;
