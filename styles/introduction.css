@@ -1,0 +1,50 @@
+*{
+    box-sizing:border-box;  
+  }
+  body{
+      background-color: rgb(0, 0, 0);
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size:2em;
+  }
+  .container{
+      position:relative;
+      max-width: 1000px;
+      margin: 0 auto;
+  }
+  .container img{vertical-align: middle;}
+
+  .container .content{
+      position:absolute;
+      bottom:0;
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.5);
+      color:#f1f1f1;
+      width: 100%;
+      padding:20px;
+  }
+  .btn{
+      font-size: 1.5em;
+      background-color: lawngreen;
+      margin-left: 750px;
+      color: ivory;
+      border: 5px outset yellow;
+  }
+  .btn a{
+    text-decoration: none;
+  }
+  h1{
+      margin-left: 200px;
+  }
+  .alarm{
+    font-size: 1.5em;
+    background-color: lawngreen;
+    margin-left: 790px;
+    color: ivory;
+    border: 5px outset yellow;
+}
+.alarm a{
+  text-decoration: none;
+}
