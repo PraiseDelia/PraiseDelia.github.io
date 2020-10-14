@@ -3,8 +3,14 @@
 }
 table{
     border: 1px solid black;
+    border-collapse: collapse;
 }
-tr:nth-child(odd){
+td, th{
+    padding: 5px;
+    text-align: left;
+    border: 1px solid black;
+}
+th{
     background-color: blue;
 }
 .date{
