@@ -1,0 +1,19 @@
+.Save{
+    background-color: white;
+}
+table{
+    border: 1px solid black;
+}
+tr:nth-child(odd){
+    background-color: blue;
+}
+.date{
+    width: 30%;
+}
+th{
+    width: fit-content;
+}
+.time{
+    width: 80%;
+    
+}
