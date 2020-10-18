@@ -1,16 +1,7 @@
 body{
-    background-color: rgb(238, 169, 255);
-    animation-name: bg-change;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-    animation-timing-function: ease-in-out;
+    background-color: rgb(39, 38, 38);
 }
-@keyframes bg-change{
-    0%{background-color: rgb(209, 47, 47)}
-    20%{background-color: rgb(201, 110, 7)}
-    40%{background-color: rgb(78, 43, 175)}
-    80%{background-color: rgb(126, 79, 170)}
-}
+
 .container{
     background-color: rgba(250, 120, 280, 0.5);
 }
@@ -19,32 +10,37 @@ body{
     background-color: rgba(250, 120, 280, 0.5);
 }
 .save{
-    background-color: rgb(205, 205, 253);
+    box-shadow: 4px 3px rgb(39, 38, 38);
+    background-color: rgb(229, 233, 0);
 }
 table{
-    border: 1px solid black;
+    border: 2px solid rgb(229, 233, 0) ;
     border-collapse: collapse;
     width: 100%;
-
 }
 td, th{
     padding: 5px;
     text-align: left;
     border: 1px solid black;
+    border-radius: 5px;
+    
 }
 th{
-    background-color: rgb(68, 68, 175);
+    color:  rgb(39, 38, 38);;
+    background-color: rgb(229, 233, 0);
 }
 .time{
     width: 40%;
     background-color: rgb(205, 205, 253);
     padding: 5px;
+    box-shadow: 5px 5px rgb(39, 38, 38);
 }
 td{
-    background-color: rgb(229, 229, 238);
+    background-color:  #777;
 }
 textarea{
     background-color: rgb(205, 205, 253);
+    box-shadow: 5px 5px rgb(39, 38, 38);
 }
 .check{
     font-size: xx-large;
