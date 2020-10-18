@@ -14,7 +14,7 @@ body{
     background-color: rgb(229, 233, 0);
 }
 table{
-    border: 2px solid rgb(229, 233, 0) ;
+    border: 4px inset rgba(229, 233, 0, 0.884) ;
     border-collapse: collapse;
     width: 100%;
 }
@@ -30,7 +30,7 @@ th{
     background-color: rgb(229, 233, 0);
 }
 .time{
-    width: 40%;
+    width: 46%;
     background-color: rgb(205, 205, 253);
     padding: 5px;
     box-shadow: 5px 5px rgb(39, 38, 38);
