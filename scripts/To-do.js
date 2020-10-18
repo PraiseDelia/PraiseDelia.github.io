@@ -28,9 +28,9 @@ class DoList{
         this.tdata3 = document.createElement("td");
         this.hour = document.createElement("input");
         this.hour.setAttribute("class", "time");
-        this.hour.setAttribute("placeholder", "hour");
+        this.hour.setAttribute("placeholder", "Hr");
         this.min = document.createElement("input");
-        this.min.setAttribute("placeholder", "min");
+        this.min.setAttribute("placeholder", "Min");
         this.min.setAttribute("class", "time");
         this.tdata4 = document.createElement("td")
         this.submit = document.createElement("button");
@@ -76,6 +76,3 @@ class DoList{
 }
 let call = new DoList()
 call.repeat()
-/*setInterval(()=>{
-    document.body.style.backgroundColor=["green", "red", "yellow", "pink", "crimson", "blue", "orange", "purple"][ Math.floor(Math.random() * 8)]
-}, 6000)*/
