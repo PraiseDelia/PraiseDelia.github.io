@@ -55,7 +55,7 @@ class DoList{
             ideal.tdata4.appendChild(ideal.check)
         })
         this.submit.addEventListener("click", () => {
-        var another = repeat();
+        var another = call.repeat();
         ideal.accessDate = new Date()
             var say = ideal.textarea.value;
             var year = ideal.accessDate.getFullYear();
