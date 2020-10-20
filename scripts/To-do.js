@@ -53,23 +53,27 @@ class DoList{
             ideal.check.setAttribute("type", "checkbox");
             ideal.check.setAttribute("class", "check")
             ideal.tdata4.appendChild(ideal.check)
+            console.log(ideal.hour.value)
         })
+
+        var ideal = this;
         this.submit.addEventListener("click", () => {
-        var another = call.repeat();
-        ideal.accessDate = new Date()
-            var say = ideal.textarea.value;
-            var year = ideal.accessDate.getFullYear();
-            var month = ideal.accessDate.getMonth();
-            var date = ideal.accessDate.getDate();
-            var hour = ideal.hour.value;
-            var min = ideal.min.value;
+            ideal.accessDate = new Date()
+            let say = ideal.textarea.value;
+            let year = ideal.accessDate.getFullYear();
+            let month = ideal.accessDate.getMonth();
+            let date = ideal.accessDate.getDate();
+            let hour = ideal.hour.value;
+            let min = ideal.min.value;
             ideal.listTime = new Date(year, month, date, hour, min);
             ideal.convertTime = ideal.accessDate.getTime()
             ideal.convertList = ideal.listTime.getTime();
-            ideal.timeLeft = ideal.convertList - ideal.convertTime;
-        setTimeout(() => {
-        alert(say)
-        }, ideal.timeLeft)
+            ideal.timeLeft = ideal.convertList - ideal.convertTime ;
+            console.log(say)
+            setTimeout(() => {
+            alert(say)
+            }, ideal.timeLeft)
+            let another = call.repeat();
         }) 
     }
 
