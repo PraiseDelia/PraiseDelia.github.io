@@ -1,0 +1,1 @@
+document.getElementById("text").style.max-width = "85%"
