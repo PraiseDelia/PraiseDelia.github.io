@@ -6,9 +6,11 @@
 
         <link rel="stylesheet" href="styles/Word.css" type="text/css">
     </head>
-    <ul >
+    <ul class="group1">
         <li><a><i class="fa fa-file">|</i></a></li>
         <li><a><i class="fa fa-film"></i></a></i></li>
+        <li><a><i class="fa fa-redo"></i></a></li>
+        <li><a><i class="fa fa-undo"></i></a></li>
         <li><a><i class="fa fa-sort-desc"></i></a></i></li>
         <li class="app" style="flex-grow: 8"><a>W2 Processor</a></div>
         <li class="item close" title="Close"><a><i class="fa fa-times"></i></a></li>
@@ -16,9 +18,9 @@
         <li class="item"><a><i class="fa fa-minus"></i></a></li>
         </ul>
 
-    <ul >
+    <ul class="group2">
         <li class="file"><a>File</a></li>
-        <li><a>Home</a></li>
+        <li class="home"><a>Home</a></li>
         <li><a>Insert</a></li>
         <li><a>Page Layout</a></li>
         <li><a>References</a></li>
@@ -26,6 +28,17 @@
         <li><a>Review</a></li>
         <li><a>View</a></li>
     </ul>
-    <div class="area"><textarea rows="70%" cols="70%" id="text"></textarea></div>
+    <button onclick="chase()"></button>
+    <ul class="group3">
+        <li class="paste"><a><i class="fa fa-paste"></i><br>Paste</a></li>
+        <li class="copy"><a><i class="fa fa-copy"></i> <br>Copy </a></li>
+        <li class="find"><a><i class="fa fa-search"></i><br>Find & Replace</a></li>
+        <!--<li><a><i class="fa fa-font"></i></a></li>
+        <li><a><i class="fa fa-bold"></i></a></li>
+        <li><a><i class="fa fa-italic"></i></a></li>
+        <li><a>Review</a></li>
+        <li><a>View</a></li>-->
+    </ul>
+    <div class="area"><textarea rows="70%" cols="120%" id="text"></textarea></div>
     <script type="text/javascript" src="scripts/Word.js"></script>
 </html>

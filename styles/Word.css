@@ -10,7 +10,7 @@
     overflow: hidden;
 }
 i{
-    color: rgb(9, 9, 153);
+    color: rgba(39, 14, 150, 0.932);
 }
 .container > div{
     
@@ -21,7 +21,7 @@ i{
     
 }
 .app{
-    background-color: #047a8f;
+    background-color: rgba(39, 14, 150, 0.932);
     justify-content: center;
     padding-left: 150px;
     padding-right: 150px;
@@ -58,7 +58,7 @@ li a{
     text-decoration: none;
 }
 li:hover{
-    background-color:  dodgerblue;
+    background: linear-gradient(to top left, #eeecec 19%, #b1aeae 60%);
 }
 
 .area{
@@ -67,8 +67,27 @@ li:hover{
     height: 100%;
     margin: 0;
 }
-#text{
+#text{ 
     margin: 5%;
     box-shadow: 4px -2px rgba(0, 0, 0, 0.4);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out ;
+}
+.group2{
+    margin: 0;
+    padding: 0;
+}
+.group2 >li{
+    border-radius: 3px 2px;
+}
+.group2 > li > a :focus{
+    background: linear-gradient(to top left, #eeecec 19%, #b1aeae 60%);
+}
+.file{
+    background-color: rgb(139, 0, 0);
+}
+.group3{
+    background-color: rgba(246, 248, 250, 0.979);
+}
+.group3 > li > a > i{
+    font-size: 25px;
 }
