@@ -23,6 +23,7 @@ i{
 .app{
     background-color: rgba(39, 14, 150, 0.932);
     justify-content: center;
+    color: white;
     padding-left: 150px;
     padding-right: 150px;
     text-align: center;
@@ -88,6 +89,10 @@ li:hover{
 .group3{
     background-color: rgba(246, 248, 250, 0.979);
 }
+#reps{
+    padding-left: 30%;
+}
 .group3 > li > a > i{
     font-size: 25px;
+   
 }
