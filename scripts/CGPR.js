@@ -5,10 +5,12 @@ class GPCalc{
         this.phase2 = document.createElement("tr");
         this.row1 = document.createElement("td")
         this.innerRow1 = document.createElement("input");
-        this.innerRow1.setAttribute("class", "Course")
+        this.innerRow1.setAttribute("class", "Course");
+        this.innerRow1.setAttribute("placeholder", "Course")
         this.row2 = document.createElement("td")
         this.innerRow2 = document.createElement("input");
         this.innerRow2.setAttribute("type", "number");
+        this.innerRow2.setAttribute("placeholder", "unit Load");
         this.row3 = document.createElement("td")
         this.innerRow3 = document.createElement("input");
         this.innerRow3.setAttribute("placeholder", "capital letters");
