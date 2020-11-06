@@ -1,7 +1,11 @@
 var collect = []
-var unitSum = []
+
 class GPCalc{
-    constructor(course, gradeNumber, CreditL ){
+    constructor(course, gradeNumber, CreditL){
+        this.course = course;
+        this.gradeNumber = gradeNumber;
+        this.CreditL = CreditL;
+        this.product = gradeNumber * CreditL
         this.phase2 = document.createElement("tr");
         this.row1 = document.createElement("td")
         this.innerRow1 = document.createElement("input");
@@ -27,35 +31,6 @@ class GPCalc{
         this.submit.appendChild(this.innerSubmit)
         document.body.appendChild(this.phase2)
         
-        var ideal = this;
-        this.submit.addEventListener("click", ()=>{
-            ideal.CreditL = ideal.innerRow2.value;
-            ideal.Grade = ideal.innerRow3.value;
-            ideal.gradeNumber;
-            switch (ideal.Grade) {
-                case "A":
-                    ideal.gradeNumber = 5;
-                    break;
-                case "B":
-                    ideal.gradeNumber = 4;
-                    break;
-                case "C":
-                    ideal.gradeNumber = 3;
-                    break;
-                case "D":
-                    ideal.gradeNumber = 2;
-                    break;
-                case "E":
-                    ideal.gradeNumber = 1;
-                    break;
-                default:
-                    ideal.gradeNumber = 0;
-            }
-            ideal.total = ideal.gradeNumber * ideal.CreditL
-            collect.push(ideal.total);
-            ideal.string = parseInt(ideal.CreditL)
-            unitSum.push(ideal.string);
-        });
     }
 }
 
@@ -65,8 +40,10 @@ document.body.appendChild(addNew)
 addNew.addEventListener("click", ()=> {
     var subject = new GPCalc(course, gradeNumber, CreditL);
     var course = subject.innerRow1.value;
-    var gradeNumber = subject.gradeNumber;
-    var CreditL = subject.CreditL
+    var CreditL = subject.innerRow2.value;
+    var gradeNumber = subject.innerRow3.value;
+    
+    collect.push(subject)
     
 })
     
@@ -74,12 +51,15 @@ var calc = document.createElement("button")
 calc.innerHTML = "Calculate GP"
 document.body.appendChild(calc)
 calc.addEventListener("click", ()=> {
-    var sum = 0;
-    var totalUnit = 0;
-    for(var i = 0; i < collect.length; i++){
-        sum += collect[i]
-        totalUnit += unitSum[i]
+    let sum = 0;
+    let totalUnits = 0;
+    for(find of collect){
+        sum += parseInt(find.product);
+        totalUnits += parseInt(find.CreditL);
+        console.log(find.CreditL)
     }
-    var GP = sum / totalUnit;
-    document.querySelector(".GPHolder").innerHTML = "Your CGPA = "+ GP
+    console.log(totalUnits)
+    var CGPA = sum/totalUnits;
+    document.querySelector(".GPHolder").innerHTML = "CGPA = " + CGPA
+   
 })
