@@ -1,0 +1,141 @@
+body{
+    background-color: #182f8A;
+    display: grid;
+}
+
+.No{
+    background-color:#70cbff;
+    padding: 1rem;
+    margin-left: 10%;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.Amount{
+    background-color: #aadcf8;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.Check{
+    padding: 1%;
+    border-radius: 10px;
+    background-color: rgb(158, 7, 7);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+}
+.Check:hover, :focus{
+    background: linear-gradient(to top right, #f1f8fa 0%, #050304 96%);
+}
+
+.oneRow{
+    border-radius: 10px;
+    padding: 1%;
+    background-color: #70cbff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.oneRow:hover, :focus{
+    background: linear-gradient(to top right, #f1f8fa 0%, #050304 96%);
+}
+.manyRows{
+    border-radius: 10px;
+    padding: 1%;
+    background-color: #70cbff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;  
+}
+
+.manyRows:hover, :focus {
+    background: linear-gradient(to top right, #f1f8fa 0%, #050304 96%);
+}
+
+h1, h2{
+    font-size:3em;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #fff748;
+    text-shadow: 5px 4px black;
+}
+.label{
+    font-size: 2em;
+    margin-top: 2%;
+    color: #fff748;
+    text-shadow: 4px 2px 2px black;
+}
+.unitNumber{
+    padding: 0.4% 3%;
+    width: 10%;
+    border-radius: 10px;
+}
+
+h4{
+    font-size:1em;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;  
+}
+#write{
+    font-size:1em;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 1.8em;
+}
+#appInfo{
+    display: inline-flex;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    left: 0px;
+    top: 0px;
+    padding-top: 10%;
+    margin-right: 50px;
+    animation-name: pop;
+    animation-duration: 3s;
+    background-color: rgba(250, 120, 280, 0.9);
+    display: block;
+}
+@keyframes pop{
+    from{top:-300px; opacity:0};
+    to{top:0px; opacity:1}
+}
+#pop-up{
+    display: inline-flex;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    left: 0px;
+    top: 0px;
+    padding-top: 10%;
+    margin-right: 50px;
+    animation-name: pop;
+    animation-duration: 3s;
+    background-color: rgba(250, 120, 280, 0.9);
+    display: none;
+   
+}
+@keyframes pop{
+    from{top:-300px; opacity:0};
+    to{top:0px; opacity:1}
+}
+.close{
+    color: white;
+    font-size: 300%;
+    font-weight: bolder;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+}
