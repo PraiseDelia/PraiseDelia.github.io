@@ -4,7 +4,7 @@ body{
 }
 
 .No{
-    background-color:#70cbff;
+    background-color: #aadcf8;
     padding: 1rem;
     margin-left: 10%;
     margin-top: 20px;
@@ -20,12 +20,14 @@ body{
 }
 
 .Check{
+    color: white;
     padding: 1%;
     border-radius: 10px;
     background-color: rgb(158, 7, 7);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: bold;
+    font-size: 1.5em;
 }
 .Check:hover, :focus{
     background: linear-gradient(to top right, #f1f8fa 0%, #050304 96%);
@@ -38,6 +40,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: oblique;
     font-weight: bold;
+    font-size: 1.5em;
 }
 
 .oneRow:hover, :focus{
@@ -50,12 +53,19 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: bold;  
+    font-size: 1.5em;
 }
 
 .manyRows:hover, :focus {
     background: linear-gradient(to top right, #f1f8fa 0%, #050304 96%);
 }
 
+.Amount:placeholder{
+    color: black;
+}
+.No:placeholder{
+    color: black;
+} 
 h1, h2{
     font-size:3em;
     font-style: oblique;
@@ -82,13 +92,7 @@ h4{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;  
 }
-#write{
-    font-size:1em;
-    font-style: oblique;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    line-height: 1.8em;
-}
+
 #appInfo{
     display: inline-flex;
     position: fixed;
@@ -132,7 +136,7 @@ h4{
 }
 .close{
     color: white;
-    font-size: 300%;
+    font-size: 500%;
     font-weight: bolder;
     position: absolute;
     top: 30px;
