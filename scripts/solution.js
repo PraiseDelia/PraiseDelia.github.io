@@ -5,9 +5,11 @@ class DataPicker{
         this.majorDiv= document.createElement("div") 
         this.inputBox1 = document.createElement("input");
         this.inputBox1.setAttribute("placeholder", "No.");
+        this.inputBox1.setAttribute("type", "Number");
         this.inputBox1.setAttribute("class", "No");
         this.inputBox2 = document.createElement("input");
         this.inputBox2.setAttribute("placeholder", "Amount");
+        this.inputBox2.setAttribute("type", "Number");
         this.inputBox2.setAttribute("class", "Amount");
         this.majorDiv.appendChild(this.inputBox1);
         this.majorDiv.appendChild(this.inputBox2);
