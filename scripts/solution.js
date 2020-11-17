@@ -1,19 +1,55 @@
-
+let cover = document
 let unsortedData = []
 class DataPicker{
     constructor(){
-        this.majorDiv= document.createElement("div") 
+        this.environ = document.querySelector(".table")
+        this.majorDiv= document.createElement("tr");
+        this.data1 = document.createElement("td"); 
         this.inputBox1 = document.createElement("input");
-        this.inputBox1.setAttribute("placeholder", "No.");
-        this.inputBox1.setAttribute("type", "Number");
         this.inputBox1.setAttribute("class", "No");
+        this.data2 = document.createElement("td")
         this.inputBox2 = document.createElement("input");
-        this.inputBox2.setAttribute("placeholder", "Amount");
         this.inputBox2.setAttribute("type", "Number");
-        this.inputBox2.setAttribute("class", "Amount");
-        this.majorDiv.appendChild(this.inputBox1);
-        this.majorDiv.appendChild(this.inputBox2);
-        document.body.appendChild(this.majorDiv);
+        this.inputBox2.setAttribute("class", "CP");
+        this.data3 = document.createElement("td")
+        this.inputBox3 = document.createElement("input");
+        this.inputBox3.setAttribute("class", "costPrice");
+        this.data4 = document.createElement("td");
+        this.inputBox4 = document.createElement("input");
+        this.inputBox4.setAttribute("class", "quantity");
+        this.data5 = document.createElement("td");
+        this.data1.appendChild(this.inputBox1);
+        this.majorDiv.appendChild(this.data1);
+        this.data2.appendChild(this.inputBox2);
+        this.majorDiv.appendChild(this.data2);
+        this.data3.appendChild(this.inputBox3);
+        this.majorDiv.appendChild(this.data3);
+        this.data4.appendChild(this.inputBox4);
+        this.majorDiv.appendChild(this.data4);
+        this.environ.appendChild(this.majorDiv);
+        this.data5 = document.createElement("tr")
+        this.calc = document.createElement("button");
+        this.calc.innerHTML = "calculate"
+        this.data5.appendChild(this.calc)
+        this.environ.appendChild(this.data5)
+
+        let ideal = this;
+        this.calc.addEventListener("click", ()=>{
+            let cp = parseInt(ideal.inputBox2.value);
+            let sp = parseInt(ideal.inputBox3.value);
+            let quant = parseInt(ideal.inputBox4.value);
+            let sales = sp * quant;
+            let costOfGoods = cp * quant;
+            let item = ideal.inputBox1.value;
+            document.querySelector(".calculation").style.display = "block";
+            if(sales > costOfGoods){
+                let itemProfit = sales - costOfGoods;
+                document.querySelector(".calculating").innerHTML = "Your profit is " + itemProfit + " from " + item;
+            }else{
+                let itemLoss = costOfGoods - sales;
+                document.querySelector(".calculating").innerHTML = "Your loss is " + itemLoss + " from " + item;
+            }
+        })
     }
 }
 
@@ -27,63 +63,35 @@ oneRow.addEventListener("click", ()=>{
     unsortedData.push(anotherRow)
 })
 
-//to let user add many rows at a time
-let manyRows = document.createElement("button");
-manyRows.setAttribute("class", "manyRows");
-manyRows.innerHTML = "Add many Rows"
-document.body.appendChild(manyRows);
-manyRows.addEventListener("click", ()=>{
-    let row1 = new DataPicker()
-    let row2 = new DataPicker()
-    let row3 = new DataPicker()
-    let row4 = new DataPicker()
-    let row5 = new DataPicker()
-    let row6 = new DataPicker()
-    let row7 = new DataPicker()
-
-    unsortedData.push(row1, row2, row3, row4, row5, row6, row7)
-})
 
 
 
-let gret = document.createElement("button")
-gret.setAttribute("class", "Check")
-gret.innerHTML="Check Profit and loss"
-    document.body.appendChild(gret)
-    gret.addEventListener("click", ()=> {
-        let amountLost = 0;
-        let profit = 0;
-        let actualPrice = 0;
-        let totalItemGain = 0;
-        let totalItemLoss = 0;
-        let regularPrice = 0;
-        let costPrice = parseInt(unitPrice.value);
+let netSales = document.createElement("button");
+netSales.setAttribute("class", "Check");
+netSales.innerHTML="Check Profit and loss"
+    document.body.appendChild(netSales)
+    netSales.addEventListener("click", ()=> {
+        let sumOfCost = 0;
+        let sumOfSales = 0;
+
         for(find of unsortedData){
-            let items = parseInt(find.inputBox1.value)
-            let amount = parseInt(find.inputBox2.value)
-            let product = items * amount;
-            let supposedProduct = costPrice * items
-            if(product > supposedProduct){
-                profit += product
-                totalItemGain += items;
-            }else if(product < supposedProduct){
-                amountLost += product;
-                totalItemLoss += items;
-            }else{actualPrice += product;
-            regularPrice += items;}
+            let bought = parseInt(find.inputBox2.value)
+            let sold = parseInt(find.inputBox3.value)
+            let number = parseInt(find.inputBox4.value)
+            let totalCost = bought * number;
+            let totalSales = sold * number;
+            sumOfCost += totalCost;
+            sumOfSales += totalSales;
+        }  
+        if(sumOfCost > sumOfSales){
+            let amountLost = sumOfCost - sumOfSales;
+            document.getElementById("pop-up").style.display = "block"
+            document.getElementById("write").innerHTML = "You Incured a gross Loss of " + amountLost + " Naira"
+        }else{
+            let profitAmount = sumOfSales - sumOfCost;
+            document.getElementById("pop-up").style.display = "block"
+            document.getElementById("write").innerHTML = "You have a gross Profit of " + profitAmount + " Naira"
         }
-        document.getElementById("pop-up").style.display = "block"
-        document.getElementById("write").innerHTML = "Loss: " + totalItemLoss + " items at " +  amountLost + "naira" + "<br>" 
-        +"Profit: " + totalItemGain + " items at " + profit + "naira " +  "<br>" +
-        "Sold at cost price: " + regularPrice + "items at " + actualPrice + "naira "
     })
 
-    let priceLabel = document.createElement("label")
-    priceLabel.innerHTML = "Cost Price"
-    priceLabel.setAttribute("class", "label")
-    let unitPrice = document.createElement("input");
-    unitPrice.setAttribute("type", "number");
-    unitPrice.setAttribute("class", "unitNumber")
-    document.body.appendChild(priceLabel);
-    document.body.appendChild(unitPrice);
-     
+    

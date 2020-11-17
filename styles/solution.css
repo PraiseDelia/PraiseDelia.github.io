@@ -2,19 +2,27 @@ body{
     background-color: #182f8A;
     display: grid;
 }
-
-.No{
-    background-color: #aadcf8;
-    padding: 1rem;
-    margin-left: 10%;
-    margin-top: 20px;
-    border-radius: 5px;
-    width: 30%;
+th{
+    border: 7px inset rgb(158, 7, 7);
+    border-radius: 3px;
+}
+tr{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(218, 198, 162);
+}
+td{
+    background-color: #70cbff;
+}
+tr,td{
+    border: 3px ridge rgb(158, 7, 7);
 }
 
 .Amount{
     background-color: #aadcf8;
-    padding: 1rem;
+    
     border-radius: 5px;
     width: 30%;
 }
@@ -46,19 +54,6 @@ body{
 .oneRow:hover, :focus{
     background: linear-gradient(to top right, #f1f8fa 0%, #050304 96%);
 }
-.manyRows{
-    border-radius: 10px;
-    padding: 1%;
-    background-color: #70cbff;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: bold;  
-    font-size: 1.5em;
-}
-
-.manyRows:hover, :focus {
-    background: linear-gradient(to top right, #f1f8fa 0%, #050304 96%);
-}
 
 .Amount:placeholder{
     color: black;
@@ -74,16 +69,12 @@ h1, h2{
     color: #fff748;
     text-shadow: 5px 4px black;
 }
-.label{
-    font-size: 2em;
-    margin-top: 2%;
-    color: #fff748;
-    text-shadow: 4px 2px 2px black;
-}
-.unitNumber{
-    padding: 0.4% 3%;
-    width: 10%;
-    border-radius: 10px;
+h3{
+    font-size:2em;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: px 4px black;
 }
 
 h4{
@@ -143,3 +134,26 @@ h4{
     right: 20px;
     cursor: pointer;
 }
+.calculation {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    overflow: auto; 
+    animation-name: pop;
+    animation-duration: 3s;
+    background-color: rgba(250, 120, 280, 0.9); 
+     
+}
+
+.content {
+    background-color: rgba(250, 120, 280, 0.9);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+

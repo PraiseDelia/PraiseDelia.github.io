@@ -7,12 +7,30 @@
     </head>
     <body>
         <h1>Sale Auditor</h1>
+        <table class="table">
+            <tr>
+                <th>Item</th>
+                <th>Cost Price</th>
+                <th>Selling Price</th>
+                <th>Quanitity</th>
+               
+            </tr>
+            <div class="calculation">
+                <div class="content">
+                  <span class="close" onclick="document.querySelector('.calculation').style.display = 'none'">&times;</span>
+                  <h4 class="calculating"></h4>
+                </div>
+              
+              </div>
+              
+            
+        </table>
         <div><h3 id="answer"></h1></div>
         <div id="pop-up">
             <div class="header">
               <span onclick="document.getElementById('pop-up').style.display = 'none'" class="close" title="close" >&times</span>
               <h1> Sales Auditor</h1>
-              <h4 id="write"></h4>
+              <h3 id="write"></h3>
             </div>
            </div>
         <script type="text/javascript" src="scripts/solution.js"></script>
@@ -20,11 +38,13 @@
             <span onclick="document.getElementById('appInfo').style.display = 'none'" class="close" title="close" >&times</span>
             <h2>APP INFO</h2>
             <h4>
-                Enter the cost price per item in the "cost price" box.<br><br>
-                Click the "add one row" or "add many rows" button to add a row or rows.<br><br>
-                Enter the number of items sold in the "No" box and the amount they were sold per item in the "amount" box.<br><br>
-                Add more rows if needed.<br><br>
-                Afterwards click on the "Check profit and loss" button to calculate your profits and losses.
+                Click the "add one row" button to add a row<br><br>
+                Item = Name of the good you sold.<br><br>
+                Cost Price = Price at which you bought those goods.<br><br>
+                Selling Price = Price at which goods were sold.<br><br>
+                Quanitity = Number of goods sold.<br><br>
+                If you wish to check the profit or loss on a particular item sold, <br> then click on the calculate button below that row <br><br>
+                To calculate gross profit on all your sales, Click on the "check profit and loss" button
             </h4>
         </div>
     </body>
