@@ -1,4 +1,4 @@
-<!DOctype HTML>
+ <!DOctype HTML>
 <html>
     <head>
         <title>W2 Processor</title>
@@ -6,39 +6,48 @@
 
         <link rel="stylesheet" href="styles/Word.css" type="text/css">
     </head>
-    <ul class="group1">
-        <li><a><i class="fa fa-file">|</i></a></li>
-        <li><a><i class="fa fa-film"></i></a></i></li>
-        <li><a><i class="fa fa-redo"></i></a></li>
-        <li><a><i class="fa fa-undo"></i></a></li>
-        <li><a><i class="fa fa-sort-desc"></i></a></i></li>
-        <li class="app" style="flex-grow: 8"><a>W2 Processor</a></div>
-        <li class="item close" title="Close"><a><i class="fa fa-times"></i></a></li>
-        <li class="item"><a><i class="fa fa-clone"></i></a></li>
-        <li class="item"><a><i class="fa fa-minus"></i></a></li>
+    
+        <ul class="group1">
+            <li><a><i class="fa fa-file">|</i></a></li>
+            <li><a><i class="fa fa-film"></i></a></i></li>
+            <li><a><i class="fa fa-redo"></i></a></li>
+            <li><a><i class="fa fa-undo"></i></a></li>
+            <li><a><i class="fa fa-sort-desc"></i></a></i></li>
+            <li class="app" style="flex-grow: 8"><a>W2 Processor</a></div>
+            <li class="item close" title="Close"><a><i class="fa fa-times"></i></a></li>
+            <li class="item"><a><i class="fa fa-clone"></i></a></li>
+            <li class="item"><a><i class="fa fa-minus"></i></a></li>
+            </ul>
+    
+        <ul class="group2">
+            <li class="file"><a>File</a></li>
+            <li class="home"><a>Home</a></li>
+            <li><a>Insert</a></li>
+            <li><a>Page Layout</a></li>
+            <li><a>References</a></li>
+            <li><a>Mailings</a></li>
+            <li><a>Review</a></li>
+            <li><a>View</a></li>
+        </ul>
+    
+        <ul class="group3">
+            <li class="layer2" id="paste"><a><i class="fa fa-paste"></i><br>Paste</a></li>
+            <li class="layer2" id="copy"><a><i class="fa fa-copy"></i> <br>Copy </a></li>
+            <li class="layer2" id="search"><a><i id="reps" class="fa fa-search"></i><br>Find & Replace</a></li>
+            <li class="layer2" ><a><i class="fa fa-font"></i></a></li>
+            <li class="layer2" ><a><i class="fa fa-bold"></i></a></li>
+            <li class="layer2" ><a><i class="fa fa-italic"></i></a></li>
+            <li class="layer2" ><a>Review</a></li>
+            <li class="layer2" ><a>View</a></li>
         </ul>
 
-    <ul class="group2">
-        <li class="file"><a>File</a></li>
-        <li class="home"><a>Home</a></li>
-        <li><a>Insert</a></li>
-        <li><a>Page Layout</a></li>
-        <li><a>References</a></li>
-        <li><a>Mailings</a></li>
-        <li><a>Review</a></li>
-        <li><a>View</a></li>
-    </ul>
-
-    <ul class="group3">
-        <li class="paste"><a><i class="fa fa-paste"></i><br>Paste</a></li>
-        <li class="copy"><a><i class="fa fa-copy"></i> <br>Copy </a></li>
-        <li class="find"><a><i id="reps" class="fa fa-search"></i><br>Find & Replace</a></li>
-        <!--<li><a><i class="fa fa-font"></i></a></li>
-        <li><a><i class="fa fa-bold"></i></a></li>
-        <li><a><i class="fa fa-italic"></i></a></li>
-        <li><a>Review</a></li>
-        <li><a>View</a></li>-->
-    </ul>
+        <ul style="display:none;" class="group4">
+            <li><input placeholder="Word" class="find"></li>
+            <li><input placeholder="replacement" class="replace" ></li>
+            <button id="replacer"><span>Find and Replace</span></button>    
+       </ul>
+    
+    
     <div class="area"><textarea rows="70%" cols="100%" id="text"></textarea></div>
     <script type="text/javascript" src="scripts/Word.js"></script>
 </html>

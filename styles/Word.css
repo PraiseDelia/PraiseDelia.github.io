@@ -13,12 +13,8 @@ i{
     color: rgba(39, 14, 150, 0.932);
 }
 .container > div{
-    
-    
     width: 100%;
     text-align: center;
-   
-    
 }
 .app{
     background-color: rgba(39, 14, 150, 0.932);
@@ -96,3 +92,22 @@ li:hover{
     font-size: 25px;
    
 }
+.find{
+    margin: 0 4px;
+    padding: 6px;
+}
+.replace{
+    margin: 0 4px ;
+    padding: 6px;
+    background: linear-gradient(to right rgba(39, 14, 150, 0.932) 20%, rgb(139, 0, 0) 50%);
+}
+#replacer{
+    float: right;
+    border: 2px solid rgba(39, 14, 150, 0.932);
+    border-radius: 7px;
+    padding: 6px;
+}
+#replacer:hover{
+    background-color: rgb(139, 0, 0) ;
+}
+
